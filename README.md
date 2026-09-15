@@ -46,3 +46,14 @@ The goals of this lab are to:
 - Apply and verify Group Policy
 - Practice Windows administration with PowerShell
 - Document troubleshooting and validation steps
+
+## 1. DC01 Network Configuration
+
+Configured DC01 with a static IPv4 address in order to assure domain controller and DNS server would always be reachable at a predictable address.
+
+- IP Address: '192.168.100.10'
+- Subnet: '192.168.100.0/24'
+- Default Gateway: '192.168.100.1'
+- DNS: configured for external resolution prior to promoting DC01 to a DNS server
+
+Verified network connectivity and DNS resolution using Powershell.
