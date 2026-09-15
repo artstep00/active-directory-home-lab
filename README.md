@@ -67,4 +67,14 @@ AD DS provides the directory services used to manage domain users, computers, gr
 
 After installing the roles, DC01 was promoted to a domain controller for the `lab.example.com` domain.
 
-![AD DS and DNS Roles Installed](screenshots/03-ad-dns-zones.png)
+![AD DS and DNS Roles Installed](screenshots/02-AD-DNS-Setup.png)
+
+## 3. Active Directory DNS Configuration
+
+An Active Directory-integrated DNS zone was created for `lab.example.com`.
+
+The DNS zone contains the necessary records for AD service discovery, including `_tcp` `_udp`, `_sites`, `DomainDnsZones` and `ForestDnsZones`. 
+
+I verified that `dc01.lab.example.com` resolves to the static IP address of `192.168.100.10`.
+
+![AD DNS Zone](screenshots/03-ad-dns-zones.png)
