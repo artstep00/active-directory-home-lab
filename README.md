@@ -67,4 +67,4 @@ AD DS provides the directory services used to manage domain users, computers, gr
 
 After installing the roles, DC01 was promoted to a domain controller for the `lab.example.com` domain.
 
-![AD DS and DNS Roles Installed](screenshots/AD-DNS-Setup.png)
+![AD DS and DNS Roles Installed](screenshots/03-ad-dns-zones.png)
