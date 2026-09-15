@@ -58,3 +58,13 @@ Configured DC01 with a static IPv4 address in order to assure domain controller 
 
 Verified network connectivity and DNS resolution using Powershell.
 ![DC01 Network Configuration](screenshots/DC01-Network-Config.png)
+
+## 2. Active Directory and DNS Setup
+
+Installed the **Active Directory Domain Services (AD DS)** and **DNS Server** roles on DC01.
+
+AD DS provides the directory services used to manage domain users, computers, groups, authentication, and Group Policy, while DNS server is required for clients to locate domain controllers and other domain services by Active Directory.
+
+After installing the roles, DC01 was promoted to a domain controller for the `lab.example.com` domain.
+
+![AD DS and DNS Roles Installed](screenshots/AD-DNS-Setup.png)
