@@ -51,9 +51,10 @@ The goals of this lab are to:
 
 Configured DC01 with a static IPv4 address in order to assure domain controller and DNS server would always be reachable at a predictable address.
 
-- IP Address: '192.168.100.10'
-- Subnet: '192.168.100.0/24'
-- Default Gateway: '192.168.100.1'
+- IP Address: `192.168.100.10`
+- Subnet: `192.168.100.0/24`
+- Default Gateway: `192.168.100.1`
 - DNS: configured for external resolution prior to promoting DC01 to a DNS server
 
 Verified network connectivity and DNS resolution using Powershell.
+![DC01 Network Configuration](screenshots/DC01-Netowrk-Config.png)
