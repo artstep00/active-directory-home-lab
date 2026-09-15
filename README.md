@@ -1,4 +1,4 @@
-# active-directory-home-lab
+# Active-Directory-Home-Lab
 Windows Active Directory home lab demonstrating AD DS, DNS, OU design, domain joins, Group Policy, and PowerShell administration.
 # Windows Active Directory Home Lab
 
