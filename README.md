@@ -57,7 +57,7 @@ Configured DC01 with a static IPv4 address in order to assure domain controller 
 - DNS: configured for external resolution prior to promoting DC01 to a DNS server
 
 Verified network connectivity and DNS resolution using Powershell.
-![DC01 Network Configuration](screenshots/DC01-Network-Config.png)
+![DC01 Network Configuration](screenshots/01-DC01-Network-Config.png)
 
 ## 2. Active Directory and DNS Setup
 
