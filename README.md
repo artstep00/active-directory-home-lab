@@ -126,6 +126,7 @@ Joined `CLIENT01` to the `lab.example.com` AD domain using the domain admin acco
 After restart, verified the authenticated user with: `whoami` which returned `lab\arivera`
 
 Confirmed that `CLIENT01` was successfully joined to the domain with: 
+
 `Get-CimInstance Win32_ComputerSystem | Select-Object Name,Domain,PartOfDomain`
 
 The output showed `lab.example.com` as the domain and `PartOfDomain` as `True`
