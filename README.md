@@ -104,4 +104,31 @@ Verified group membership using PowerShell with:
 
 ![IT Helpdesk Group Membership](screenshots/05-created-user.png)
 
+## 6. CLIENT01 Network and DNS Configuration
+
+Configured `CLIENT01` with a static IPv4 address.
+
+- IP Address: `192.168.100.11`
+- Subnet: `192.168.100.0/24`
+- Default Gateway: `192.168.100.1`
+- DNS Server: `192.168.100.10`
+
+Configured `CLIENT01` to use `DC01` as its DNS server, allowing the workstation to resolve the `lab.example.com` domain to locate AD services.
+
+Verified that `dc01.lab.example.com` resolved to `192.168.100.10` and confirmed AD service discovery by querying the LDAP SRV record, which returned `DC01` on port `389`.
+
+![CLIENT DNS Validation](screenshots/06.dns-server-confirm.png)
+
+## 7. CLIENT01 Domain Join
+
+Joined `CLIENT01` to the `lab.example.com` AD domain using the domain admin account to authorize the join.
+
+After restart, verified the authenticated user with: `whoami` which returned `lab\arivera`
+
+Confirmed that `CLIENT01` was successfully joined to the domain with: 
+`Get-CimInstance Win32_ComputerSystem | Select-Object Name,Domain,PartOfDomain`
+
+The output showed `lab.example.com` as the domain and `PartOfDomain` as `True`
+
+![CLIENT01 Domain Join](screenshots/07-domain-join.png)
 
