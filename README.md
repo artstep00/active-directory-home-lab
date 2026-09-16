@@ -132,3 +132,15 @@ The output showed `lab.example.com` as the domain and `PartOfDomain` as `True`
 
 ![CLIENT01 Domain Join](screenshots/07-domain-join.png)
 
+## 8. Group Policy Verification
+
+Created and linked the `Workstations - Logon Banner` Group Policy Object to the `WORKSTATIONS` OU.
+
+After refreshing GP on `CLIENT01`, I verified the applied computer policies with: `gpresult /r /scope computer`
+
+The output confirmed that `CLIENT01` received the `Workstations - Logon Banner` GPO from `DC01.lab.example.com`,
+
+It also confirmed that the `CLIENT01` computer object was located in the expected OU:
+`OU=WORKSTATIONS,OU=HOMELAB,DC=lab,DC=example,DC=com`
+
+![Group Policy Verification](screenshots/08-gpo-update.png)
