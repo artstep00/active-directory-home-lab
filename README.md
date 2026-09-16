@@ -101,4 +101,7 @@ Created the domain user `Alex Rivera` and added the account to the `IT-Helpdesk`
 Verified group membership using PowerShell with:
 
 `Get-ADGroupMember -Identity "IT-Helpdesk" | Select-Object Name,SamAccountName,ObjectClass`
+
 ![IT Helpdesk Group Membership](screenshots/05-created-user.png)
+
+
