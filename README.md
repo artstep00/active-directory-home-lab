@@ -78,3 +78,27 @@ The DNS zone contains the necessary records for AD service discovery, including 
 I verified that `dc01.lab.example.com` resolves to the static IP address of `192.168.100.10`.
 
 ![AD DNS Zone](screenshots/03-ad-dns-zones.png)
+
+## 4. Organizational Unit Structure
+
+Created a custom `HOMELAB` OU to separate lab objects from the default AD containers.
+
+Created separate OUs in `HOMELAB` for:
+
+- `USERS`
+- `GROUPS`
+- `WORKSTATIONS`
+- `SERVERS`
+
+This structure allows for easier organization of directory objects and application of Group Policy to specific categories of users and computers.
+
+![Active Directory OU Structure](screenshots/04-ou-structure.png)
+
+## 5. User and Group Administration
+
+Created the domain user `Alex Rivera` and added the account to the `IT-Helpdesk` security group.
+
+Verified group membership using PowerShell with:
+
+`Get-ADGroupMember -Identity "IT-Helpdesk" | Select-Object Name,SamAccountName,ObjectClass`
+![IT Helpdesk Group Membership](screenshot\05-created-user.png)
