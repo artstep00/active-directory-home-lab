@@ -144,3 +144,11 @@ It also confirmed that the `CLIENT01` computer object was located in the expecte
 `OU=WORKSTATIONS,OU=HOMELAB,DC=lab,DC=example,DC=com`
 
 ![Group Policy Verification](screenshots/08-gpo-update.png)
+
+## 9. Group Policy Result
+
+Once `Workstations - Logon Banner` GPO was applied to `CLIENT01`, the configured security notice appeared before sign-in.
+
+This confirmed that the workstation successfully received and enforced the GP setting from the domain.
+
+![Logon Banner GPO Result](screenshots/09-logon-banner.png)
