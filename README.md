@@ -194,3 +194,21 @@ Created and resolved a simulated help desk ticket for a user who could not sign 
 The incident was documented using GitHub Issues to simulate a basic help desk ticket workflow.
 
 [View the completed password reset ticket](https://github.com/artstep00/active-directory-home-lab/issues/1)
+
+## 12. Simulated Help Desk Ticket - Network Share Access
+
+Created and resolved a simulated help desk ticket for a user who could no longer access the `IT` network share.
+
+### Troubleshooting Summary
+
+- Confirmed `CLIENT01` could reach `DC01` over SMB port `445`
+- Verified `arivera` was still a member of the `IT-Helpdesk` security group
+- Identified incorrect SMB share permissions on `\\DC01\IT`
+- Restored `Change` access for the `LAB\IT-Helpdesk` group
+- Verified the user could access and create files in the share
+- Remapped the share to drive `I:` and confirmed successful access
+
+The incident was documented using GitHub Issues to simulate a help desk troubleshooting and resolution workflow.
+
+[View the completed network share access ticket](https://github.com/artstep00/active-directory-home-lab/issues/2)
+
