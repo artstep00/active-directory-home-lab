@@ -153,3 +153,20 @@ Once `Workstations - Logon Banner` GPO was applied to `CLIENT01`, the configured
 This confirmed that the workstation successfully received and enforced the GP setting from the domain.
 
 ![Logon Banner GPO Result](screenshots/09-logon-banner.png)
+
+## 10. Simulated Help Desk Ticket - Password Reset
+
+Created and resolved a simulated help desk ticket for a user who could not sign in to their domain account.
+
+### Troubleshooting Summary
+
+- Verified the `arivera` account existed in Active Directory
+- Confirmed the account was enabled and not locked out
+- Reset the user's domain password
+- Required a password change at the next logon
+- Verified the updated `PasswordLastSet` value in Active Directory
+- Confirmed successful authentication to `CLIENT01`
+
+The incident was documented using GitHub Issues to simulate a basic help desk ticket workflow.
+
+[View the completed password reset ticket](https://github.com/artstep00/active-directory-home-lab/issues/1)
