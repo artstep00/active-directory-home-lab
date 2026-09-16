@@ -166,7 +166,19 @@ This confirmed that the workstation successfully received and enforced the Group
 
 ![Logon Banner GPO Result](screenshots/09-logon-banner.png)
 
-## 10. Simulated Help Desk Ticket - Password Reset
+## 10. Network Share and Drive Mapping
+
+Created an SMB share on `DC01` and granted access through the `IT-Helpdesk` security group.
+
+From `CLIENT01`, verified access to `\\DC01\IT`, created a test file, and mapped the share to drive `I:` using PowerShell.
+
+`New-PSDrive -Name I -PSProvider FileSystem -Root "\\DC01\IT" -Persist`
+
+The mapped drive was then verified with `Get-PSDrive` and `Get-ChildItem`.
+
+![Network Drive Mapping](screenshots/10-network-drive-mapping.png)
+
+## 11. Simulated Help Desk Ticket - Password Reset
 
 Created and resolved a simulated help desk ticket for a user who could not sign in to their domain account.
 
